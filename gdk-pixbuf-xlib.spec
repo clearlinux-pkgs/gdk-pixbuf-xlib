@@ -4,7 +4,7 @@
 #
 Name     : gdk-pixbuf-xlib
 Version  : 2.40.2
-Release  : 1
+Release  : 2
 URL      : https://download.gnome.org/sources/gdk-pixbuf-xlib/2.40/gdk-pixbuf-xlib-2.40.2.tar.xz
 Source0  : https://download.gnome.org/sources/gdk-pixbuf-xlib/2.40/gdk-pixbuf-xlib-2.40.2.tar.xz
 Summary  : No detailed summary available
