@@ -4,7 +4,7 @@
 #
 Name     : gdk-pixbuf-xlib
 Version  : 2.40.2
-Release  : 3
+Release  : 4
 URL      : https://download.gnome.org/sources/gdk-pixbuf-xlib/2.40/gdk-pixbuf-xlib-2.40.2.tar.xz
 Source0  : https://download.gnome.org/sources/gdk-pixbuf-xlib/2.40/gdk-pixbuf-xlib-2.40.2.tar.xz
 Summary  : No detailed summary available
@@ -58,21 +58,21 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1607488760
+export SOURCE_DATE_EPOCH=1664144470
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
 export NM=gcc-nm
-export CFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=4 "
-export FCFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=4 "
-export FFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=4 "
-export CXXFLAGS="$CXXFLAGS -O3 -ffat-lto-objects -flto=4 "
+export CFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=auto "
+export FCFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=auto "
+export FFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=auto "
+export CXXFLAGS="$CXXFLAGS -O3 -ffat-lto-objects -flto=auto "
 CFLAGS="$CFLAGS" CXXFLAGS="$CXXFLAGS" LDFLAGS="$LDFLAGS" meson --libdir=lib64 --prefix=/usr --buildtype=plain   builddir
 ninja -v -C builddir
 
 %install
 mkdir -p %{buildroot}/usr/share/package-licenses/gdk-pixbuf-xlib
-cp %{_builddir}/gdk-pixbuf-xlib-2.40.2/COPYING %{buildroot}/usr/share/package-licenses/gdk-pixbuf-xlib/01a6b4bf79aca9b556822601186afab86e8c4fbf
+cp %{_builddir}/gdk-pixbuf-xlib-%{version}/COPYING %{buildroot}/usr/share/package-licenses/gdk-pixbuf-xlib/01a6b4bf79aca9b556822601186afab86e8c4fbf || :
 DESTDIR=%{buildroot} ninja -C builddir install
 
 %files
